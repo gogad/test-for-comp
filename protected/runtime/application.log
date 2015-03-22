@@ -29,3 +29,54 @@ Stack trace:
 #26 {main}
 REQUEST_URI=/index.php?r=gii/default/login
 ---
+2015/03/22 12:16:37 [error] [php] Undefined variable: i (/var/www/yiitest.loc/protected/commands/NewCommand.php:33)
+Stack trace:
+#0 /var/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#1 /var/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#2 /var/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#3 /var/www/yiitest.loc/protected/yiic.php(7): require_once()
+#4 /var/www/yiitest.loc/protected/yiic(4): require_once()
+
+2015/03/22 12:40:10 [error] [php] Array to string conversion (/var/www/yiitest.loc/protected/commands/NewCommand.php:85)
+Stack trace:
+#0 /var/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#1 /var/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#2 /var/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#3 /var/www/yiitest.loc/protected/yiic.php(7): require_once()
+#4 /var/www/yiitest.loc/protected/yiic(4): require_once()
+
+2015/03/22 12:52:47 [error] [php] include(Student.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/yiitest.loc/protected/commands/NewCommand.php(36): spl_autoload_call()
+#1 /var/www/yiitest.loc/protected/commands/NewCommand.php(27): NewCommand->addStudent()
+#2 /var/www/yii/framework/console/CConsoleCommandRunner.php(71): NewCommand->run()
+#3 /var/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /var/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /var/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#6 /var/www/yiitest.loc/protected/yiic.php(7): require_once()
+#7 /var/www/yiitest.loc/protected/yiic(4): require_once()
+
+2015/03/22 13:12:22 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION yiitest.random does not exist. The SQL statement executed was: SELECT *, random() as rand FROM `student` `t` ORDER BY rand LIMIT 1.
+2015/03/22 13:12:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION yiitest.random does not exist. The SQL statement executed was: SELECT *, random() as rand FROM `student` `t` ORDER BY rand LIMIT 1' in /var/www/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /var/www/yiitest.loc/protected/commands/NewCommand.php(59): CActiveRecord->find(Array)
+#4 /var/www/yiitest.loc/protected/commands/NewCommand.php(29): NewCommand->addApprove()
+#5 /var/www/yii/framework/console/CConsoleCommandRunner.php(71): NewCommand->run(Array)
+#6 /var/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /var/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /var/www/yii/framework/yiic.php(33): CApplication->run()
+#9 /var/www/yiitest.loc/protected/yiic.php(7): require_once('/var/www/yii/fr...')
+#10 /var/www/yiitest.loc/protected/yiic(4): require_once('/var/www/yiites...')
+#11 {main}
+---
+2015/03/22 13:18:26 [error] [php] Trying to get property of non-object (/var/www/yiitest.loc/protected/commands/NewCommand.php:63)
+Stack trace:
+#0 /var/www/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#1 /var/www/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#2 /var/www/yii/framework/yiic.php(33): CConsoleApplication->run()
+#3 /var/www/yiitest.loc/protected/yiic.php(7): require_once()
+#4 /var/www/yiitest.loc/protected/yiic(4): require_once()
+
